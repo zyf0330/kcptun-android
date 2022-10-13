@@ -18,14 +18,14 @@ def getCurrentFlavor() {
 }
 
 android {
-    buildToolsVersion "28.0.3"
-    compileSdkVersion 28
+    buildToolsVersion "33.0.0"
+    compileSdkVersion 30
     defaultConfig {
         applicationId "com.github.shadowsocks.plugin.kcptun"
         minSdkVersion rootProject.minSdkVersion
-        targetSdkVersion 28
-        versionCode 1000100
-        versionName "1.0.1"
+        targetSdkVersion 30
+        versionCode 2000000
+        versionName "2.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -39,6 +39,11 @@ android {
         abi {
             enable true
             universalApk true
+        }
+    }
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging true
         }
     }
     sourceSets.main.jniLibs.srcDirs += new File(projectDir, "src/bin")
@@ -72,7 +77,7 @@ tasks.whenTaskAdded { task ->
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
-    implementation 'com.github.shadowsocks:plugin:1.0.0'
+    implementation 'com.github.shadowsocks:plugin:2.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'

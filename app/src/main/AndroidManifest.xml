@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.github.shadowsocks.plugin.kcptun">
+          package="com.github.shadowsocks.plugin.kcptun"
+          android:installLocation="internalOnly"
+          >
     <uses-feature android:name="android.hardware.touchscreen"
                   android:required="false"/>
     <application android:allowBackup="false"
@@ -18,7 +20,7 @@
                 <action android:name="com.github.shadowsocks.plugin.ACTION_NATIVE_PLUGIN"/>
                 <data android:scheme="plugin"
                       android:host="com.github.shadowsocks"
-                      android:pathPrefix="/kcptun"/>
+                      android:path="/kcptun"/>
             </intent-filter>
             <meta-data android:name="com.github.shadowsocks.plugin.id"
                        android:value="kcptun"/>

@@ -1,4 +1,4 @@
 [submodule "src/kcptun"]
 	path = app/src/kcptun
-	url = https://github.com/shadowsocks/kcptun.git
+	url = https://github.com/zyf0330/kcptun.git
 	branch = shadowsocks
