@@ -18,14 +18,14 @@ def getCurrentFlavor() {
 }
 
 android {
-    buildToolsVersion "33.0.0"
-    compileSdkVersion 30
+    buildToolsVersion = "33.0.0"
+    compileSdk 31
     defaultConfig {
         applicationId "com.github.shadowsocks.plugin.kcptun"
         minSdkVersion rootProject.minSdkVersion
-        targetSdkVersion 30
-        versionCode 2010000
-        versionName "2.1.0"
+        targetSdkVersion 31
+        versionCode 2020000
+        versionName "2.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -47,6 +47,7 @@ android {
         }
     }
     sourceSets.main.jniLibs.srcDirs += new File(projectDir, "src/bin")
+    namespace 'com.github.shadowsocks.plugin.kcptun'
 }
 
 task goBuild(type: Exec) {

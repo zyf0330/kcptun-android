@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.github.shadowsocks.plugin.kcptun"
-          android:installLocation="internalOnly"
+  android:installLocation="internalOnly"
           >
     <uses-feature android:name="android.hardware.touchscreen"
                   android:required="false"/>
@@ -28,7 +27,8 @@
                        android:value="crypt=none;mode=normal;mtu=1200;nocomp;dscp=46;parityshard=0"/>
         </provider>
         <activity android:name=".HelpCallback"
-                  android:theme="@style/Theme.AppCompat.Translucent">
+                  android:theme="@style/Theme.AppCompat.Translucent"
+                  android:exported="false">
             <intent-filter>
                 <action android:name="com.github.shadowsocks.plugin.ACTION_HELP"/>
                 <category android:name="android.intent.category.DEFAULT"/>
