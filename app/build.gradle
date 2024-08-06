@@ -24,8 +24,8 @@ android {
         applicationId "com.github.shadowsocks.plugin.kcptun"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion 31
-        versionCode 2020000
-        versionName "2.2.0"
+        versionCode 2030000
+        versionName "2.3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -48,6 +48,7 @@ android {
     }
     sourceSets.main.jniLibs.srcDirs += new File(projectDir, "src/bin")
     namespace 'com.github.shadowsocks.plugin.kcptun'
+    ndkVersion '25.2.9519653'
 }
 
 task goBuild(type: Exec) {
